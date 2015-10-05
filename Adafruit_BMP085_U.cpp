@@ -327,7 +327,7 @@ void Adafruit_BMP085_Unified::getPressure(float *pressure)
     @brief  Reads the temperatures in degrees Celsius
 */
 /**************************************************************************/
-void Adafruit_BMP085_Unified::getTemperature(float *temp)
+/*void Adafruit_BMP085_Unified::getTemperature(float *temp)
 {
   int32_t UT, X1, X2, B5;     // following ds convention
   float t;
@@ -348,7 +348,7 @@ void Adafruit_BMP085_Unified::getTemperature(float *temp)
   t /= 10;
 
   *temp = t;
-}
+}*/
 
 /**************************************************************************/
 /*!
@@ -359,7 +359,7 @@ void Adafruit_BMP085_Unified::getTemperature(float *temp)
     @param  atmospheric   Atmospheric pressure in hPa
 */
 /**************************************************************************/
-float Adafruit_BMP085_Unified::pressureToAltitude(float seaLevel, float atmospheric)
+/*float Adafruit_BMP085_Unified::pressureToAltitude(float seaLevel, float atmospheric)
 {
   // Equation taken from BMP180 datasheet (page 16):
   //  http://www.adafruit.com/datasheets/BST-BMP180-DS000-09.pdf
@@ -369,7 +369,7 @@ float Adafruit_BMP085_Unified::pressureToAltitude(float seaLevel, float atmosphe
   //  http://forums.adafruit.com/viewtopic.php?f=22&t=58064
   
   return 44330.0 * (1.0 - pow(atmospheric / seaLevel, 0.1903));
-}
+}*/
 
 /**************************************************************************/
 /*!
@@ -387,10 +387,10 @@ float Adafruit_BMP085_Unified::pressureToAltitude(float seaLevel, float atmosphe
     @param  temp          Temperature in degrees Celsius
 */
 /**************************************************************************/
-float Adafruit_BMP085_Unified::pressureToAltitude(float seaLevel, float atmospheric, float temp)
+/*float Adafruit_BMP085_Unified::pressureToAltitude(float seaLevel, float atmospheric, float temp)
 {
   return pressureToAltitude(seaLevel, atmospheric);
-}
+}*/
 
 /**************************************************************************/
 /*!
@@ -401,7 +401,7 @@ float Adafruit_BMP085_Unified::pressureToAltitude(float seaLevel, float atmosphe
     @param  atmospheric   Atmospheric pressure in hPa
 */
 /**************************************************************************/
-float Adafruit_BMP085_Unified::seaLevelForAltitude(float altitude, float atmospheric)
+/*float Adafruit_BMP085_Unified::seaLevelForAltitude(float altitude, float atmospheric)
 {
   // Equation taken from BMP180 datasheet (page 17):
   //  http://www.adafruit.com/datasheets/BST-BMP180-DS000-09.pdf
@@ -411,7 +411,7 @@ float Adafruit_BMP085_Unified::seaLevelForAltitude(float altitude, float atmosph
   //  http://forums.adafruit.com/viewtopic.php?f=22&t=58064
   
   return atmospheric / pow(1.0 - (altitude/44330.0), 5.255);
-}
+}*/
 
 /**************************************************************************/
 /*!
@@ -429,10 +429,10 @@ float Adafruit_BMP085_Unified::seaLevelForAltitude(float altitude, float atmosph
     @param  temp          Temperature in degrees Celsius
 */
 /**************************************************************************/
-float Adafruit_BMP085_Unified::seaLevelForAltitude(float altitude, float atmospheric, float temp)
+/*float Adafruit_BMP085_Unified::seaLevelForAltitude(float altitude, float atmospheric, float temp)
 {
   return seaLevelForAltitude(altitude, atmospheric);
-}
+}*/
 
 
 

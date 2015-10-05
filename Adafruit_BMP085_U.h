@@ -102,15 +102,15 @@ class Adafruit_BMP085_Unified : public Adafruit_Sensor
     Adafruit_BMP085_Unified(int32_t sensorID = -1);
   
     bool  begin(bmp085_mode_t mode = BMP085_MODE_ULTRAHIGHRES);
-    void  getTemperature(float *temp);
+    //void  getTemperature(float *temp);
     void  getPressure(float *pressure);
-    float pressureToAltitude(float seaLvel, float atmospheric);
-    float seaLevelForAltitude(float altitude, float atmospheric);
+    //float pressureToAltitude(float seaLvel, float atmospheric);
+    //float seaLevelForAltitude(float altitude, float atmospheric);
     // Note that the next two functions are just for compatibility with old
     // code that passed the temperature as a third parameter.  A newer
     // calculation is used which does not need temperature.
-    float pressureToAltitude(float seaLevel, float atmospheric, float temp);
-    float seaLevelForAltitude(float altitude, float atmospheric, float temp);
+    //float pressureToAltitude(float seaLevel, float atmospheric, float temp);
+    //float seaLevelForAltitude(float altitude, float atmospheric, float temp);
     bool  getEvent(sensors_event_t*);
     void  getSensor(sensor_t*);
 
